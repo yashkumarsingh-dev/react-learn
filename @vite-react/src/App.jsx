@@ -1,7 +1,14 @@
+import Chai from './chai'
+
 function App() {
 
   return (
-    <h1>I love Sanjana</h1>
+    <>
+      <Chai />
+      <h1>Chai aur Code</h1>
+      <p>test para</p>
+    </>
+    
   )
 }
 
