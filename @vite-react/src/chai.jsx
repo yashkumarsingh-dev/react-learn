@@ -5,4 +5,3 @@ function Chai(){
 }
 
 export default Chai
-// Compare this snippet from 01basicreact/src/App.js:
