@@ -4,8 +4,6 @@ import { TodoProvider } from "./contexts";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  
-
   return (
     <TodoProvider
       value={{ todos, addTodo, updateTodo, deleteTodo, togggleCompleted }}
