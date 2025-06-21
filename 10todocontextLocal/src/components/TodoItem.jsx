@@ -8,7 +8,14 @@ function TodoItem({ todo }) {
   const { updateTodo, deleteTodo, toggleComplete } = useTodo();
 
   const editTodo = () => {
-    
+    updateTodo(todo.id, { ...todo, todo: todoMsg });
+    setisTodoEditable(false);
+  }
+
+  const toggleCompleted = () => {
+    toggleComplete(todo.id);
+    setTodoMsg(todo.todo); // Reset the todo message to the original if toggled
+    setisTodoEditable(false); // Exit edit mode when toggling completion
   }
 
   return (
