@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTodo } from "../contexts";
 
 function TodoItem({ todo }) {
@@ -14,8 +14,6 @@ function TodoItem({ todo }) {
 
   const toggleCompleted = () => {
     toggleComplete(todo.id);
-    setTodoMsg(todo.todo); // Reset the todo message to the original if toggled
-    setisTodoEditable(false); // Exit edit mode when toggling completion
   }
 
   return (
@@ -47,7 +45,7 @@ function TodoItem({ todo }) {
 
           if (isTodoEditable) {
             editTodo();
-          } else setIsTodoEditable((prev) => !prev);
+          } else setisTodoEditable((prev) => !prev);
         }}
         disabled={todo.completed}
       >
